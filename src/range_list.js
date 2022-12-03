@@ -173,6 +173,7 @@ class RangeList {
   /**
    * String representation of range list.
    * @return {string} returns string representation of range list.
+   * @public
    */
   toString() {
     return this.ranges_.map(item => `[${item[0]}, ${item[1]})`).join(" ");
@@ -181,6 +182,7 @@ class RangeList {
   /**
    * Print the string representation of range list
    * @return {void}
+   * @public
    */
   print() {
     console.log(this.toString());
