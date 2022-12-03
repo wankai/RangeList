@@ -20,7 +20,7 @@ coverage/ | coverage report
 
 # Algorithm
 
-add and remove method both use binary search
+Binary search used in RangeList.add and RangeList.remove
 
 # Format
 
