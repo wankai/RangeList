@@ -1,7 +1,7 @@
 const {describe, expect, test} = require("@jest/globals");
-const RangeList = require('../src/range_list.js');
 const { spawn } = require('child_process');
 const path = require('path');
+const RangeList = require('../src/range_list.js');
 
 describe("test range validation", () => {
   test("not array", () => {
