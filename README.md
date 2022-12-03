@@ -6,13 +6,9 @@ https://github.com/wankai/RangeList
 directory | explaination
 --------- | ----------------------------------
 src/      | source code: range_list.js
-----------|--------------------------------------
 test/     | unit tests: range_list.spec.js
-----------|--------------------------------------
 doc/      | jsdoc generated documents
-----------|--------------------------------------
 coverage/ | coverage report
-----------|--------------------------------------
 
 # Tools used in this project
 
