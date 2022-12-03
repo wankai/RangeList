@@ -17,14 +17,27 @@ describe("test range validation", () => {
     expect(() => range_list.add([1])).toThrow();
   });
 
-  test("array item is not integer", () => {
+  test("array item can not be string", () => {
     const range_list = new RangeList();
     expect(() => range_list.add(["str", 3])).toThrow();
-    expect(() => range_list.add([[1, 2], 3])).toThrow();
-    expect(() => range_list.add([{"name": "john"}, 3])).toThrow();
-
     expect(() => range_list.add([3, "str"])).toThrow();
+  });
+
+  test("array item can not be list", () => {
+    const range_list = new RangeList();
+    expect(() => range_list.add([[1, 2], 3])).toThrow();
     expect(() => range_list.add([3, [1, 2]])).toThrow();
+  });
+	
+  test("array item can not be float", () => {
+    const range_list = new RangeList();
+    expect(() => range_list.add([1.3, 3])).toThrow();
+    expect(() => range_list.add([3, 1.3])).toThrow();
+  });
+
+  test("array item can not be object", () => {
+    const range_list = new RangeList();
+    expect(() => range_list.add([{"name": "john"}, 3])).toThrow();
     expect(() => range_list.add([3, {"name": "john"}])).toThrow();
   });
 });

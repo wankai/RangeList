@@ -35,8 +35,8 @@ All files      |     100 |      100 |     100 |     100 |
 
 Test Suites: 1 passed, 1 total
 
-Tests:       18 passed, 18 total
+Tests:       21 passed, 21 total
 
 Snapshots:   0 total
 
-Time:        0.456 s
+Time:        0.487 s

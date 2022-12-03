@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670067528716" clover="3.2.0">
-  <project timestamp="1670067528716" name="All files">
+<coverage generated="1670067891135" clover="3.2.0">
+  <project timestamp="1670067891135" name="All files">
     <metrics statements="77" coveredstatements="77" conditionals="32" coveredconditionals="32" methods="11" coveredmethods="11" elements="120" coveredelements="120" complexity="0" loc="77" ncloc="77" packages="1" files="1" classes="1"/>
     <file name="range_list.js" path="/home/lighthouse/RangeList/src/range_list.js">
       <metrics statements="77" coveredstatements="77" conditionals="32" coveredconditionals="32" methods="11" coveredmethods="11"/>
-      <line num="21" count="18" type="stmt"/>
-      <line num="27" count="18" type="stmt"/>
+      <line num="21" count="21" type="stmt"/>
+      <line num="27" count="21" type="stmt"/>
       <line num="28" count="15" type="stmt"/>
       <line num="38" count="80" type="stmt"/>
-      <line num="59" count="31" type="stmt"/>
+      <line num="59" count="33" type="stmt"/>
       <line num="60" count="20" type="cond" truecount="2" falsecount="0"/>
       <line num="61" count="1" type="stmt"/>
       <line num="63" count="19" type="stmt"/>
@@ -58,14 +58,14 @@
       <line num="179" count="48" type="stmt"/>
       <line num="188" count="3" type="stmt"/>
       <line num="200" count="31" type="stmt"/>
-      <line num="210" count="42" type="cond" truecount="2" falsecount="0"/>
+      <line num="210" count="44" type="cond" truecount="2" falsecount="0"/>
       <line num="211" count="3" type="stmt"/>
-      <line num="213" count="39" type="cond" truecount="2" falsecount="0"/>
+      <line num="213" count="41" type="cond" truecount="2" falsecount="0"/>
       <line num="214" count="2" type="stmt"/>
-      <line num="216" count="37" type="cond" truecount="2" falsecount="0"/>
-      <line num="217" count="3" type="stmt"/>
-      <line num="219" count="34" type="cond" truecount="2" falsecount="0"/>
-      <line num="220" count="3" type="stmt"/>
+      <line num="216" count="39" type="cond" truecount="2" falsecount="0"/>
+      <line num="217" count="4" type="stmt"/>
+      <line num="219" count="35" type="cond" truecount="2" falsecount="0"/>
+      <line num="220" count="4" type="stmt"/>
       <line num="240" count="196" type="stmt"/>
       <line num="241" count="196" type="cond" truecount="2" falsecount="0"/>
       <line num="242" count="109" type="stmt"/>
