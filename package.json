@@ -1,0 +1,30 @@
+{
+  "name": "rangelist",
+  "version": "0.0.1",
+  "description": "a class for range list manipulation",
+  "main": "range_list.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "wankaizhang@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "jest": "^29.3.1",
+    "jsdoc": "^4.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
+  }
+}
