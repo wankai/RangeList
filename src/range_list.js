@@ -2,6 +2,7 @@
  * @author wankaizhang@gmail.com
  * @classdesc This is a class for manipulating a list of integer ranges.
  */
+
 class RangeList {
   /**
    * Create a new empty RangeList.
@@ -208,16 +209,16 @@ class RangeList {
    */
   checkRange_(range) {
     if (!Array.isArray(range)) {
-      throw new Error("param range must be an array");
+      throw new RangeList.InvalidArgumentError("param range must be an array");
     }
     if (range.length != 2) {
-      throw new Error("param range lengh must equal to 2 ");
+      throw new RangeList.InvalidArgumentError("param range lengh must equal to 2 ");
     }
     if (!Number.isInteger(range[0])) {
-      throw new Error("first number of range must be integer ");
+      throw new RangeList.InvalidArgumentError("first number of range must be integer ");
     }
     if (!Number.isInteger(range[1])) {
-      throw new Error("second number of range must be integer ");
+      throw new RangeList.InvalidArgumentError("second number of range must be integer ");
     }
   }
 
@@ -283,6 +284,32 @@ class RangeList {
 
     return left;
   }
+}
+
+/**
+ * InvalidArgumentError is throwed when range format is invalid.
+ * It's effectively a nested class of class RangeList.
+ *
+ * The code is arranged here, but not inside class RangeList, because
+ * jsDoc can't process nested class
+ *
+ *     Usage:
+ *         throw new RangeList.InvalidArgumentError("error message");
+ *
+ * @classdesc InvalidArgumentError is effectively a nested exception class
+ *            within the namespace RangeList.
+ */
+RangeList.InvalidArgumentError = class extends Error {
+  /**
+   * @constructor
+   * @param {string} message - error message when throwed
+   * @return {void}
+   * @public
+   */
+  constructor(message) {
+    super(message);
+    this.name = "InvalidArgumentError";
+  } 
 }
 
 module.exports = RangeList;

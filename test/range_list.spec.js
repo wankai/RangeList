@@ -6,39 +6,39 @@ const RangeList = require('../src/range_list.js');
 describe("test range validation", () => {
   test("not array", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add("a string")).toThrow();
-    expect(() => range_list.add(123)).toThrow();
-    expect(() => range_list.add({"name": "john"})).toThrow();
+    expect(() => range_list.add("a string")).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add(123)).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add({"name": "john"})).toThrow(RangeList.InvalidArgumentError);
   });
 	
   test("array length is not 2", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add([1, 3, 4])).toThrow();
-    expect(() => range_list.add([1])).toThrow();
+    expect(() => range_list.add([1, 3, 4])).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add([1])).toThrow(RangeList.InvalidArgumentError);
   });
 
   test("array item can not be string", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add(["str", 3])).toThrow();
-    expect(() => range_list.add([3, "str"])).toThrow();
+    expect(() => range_list.add(["str", 3])).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add([3, "str"])).toThrow(RangeList.InvalidArgumentError);
   });
 
   test("array item can not be list", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add([[1, 2], 3])).toThrow();
-    expect(() => range_list.add([3, [1, 2]])).toThrow();
+    expect(() => range_list.add([[1, 2], 3])).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add([3, [1, 2]])).toThrow(RangeList.InvalidArgumentError);
   });
 	
   test("array item can not be float", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add([1.3, 3])).toThrow();
-    expect(() => range_list.add([3, 1.3])).toThrow();
+    expect(() => range_list.add([1.3, 3])).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add([3, 1.3])).toThrow(RangeList.InvalidArgumentError);
   });
 
   test("array item can not be object", () => {
     const range_list = new RangeList();
-    expect(() => range_list.add([{"name": "john"}, 3])).toThrow();
-    expect(() => range_list.add([3, {"name": "john"}])).toThrow();
+    expect(() => range_list.add([{"name": "john"}, 3])).toThrow(RangeList.InvalidArgumentError);
+    expect(() => range_list.add([3, {"name": "john"}])).toThrow(RangeList.InvalidArgumentError);
   });
 });
 
