@@ -1,10 +1,10 @@
 # Project organization
 
 root-directory
-   - src/
-   - test/
-   - doc/
-   - coverage/
+   -- src/
+   -- test/
+   -- doc/
+   -- coverage/
 
 # Tools used in this project
 
@@ -14,13 +14,16 @@ root-directory
 * jest
 * jsdoc
 
+# Algorithm
+
+add and remove method both use binary search
+
 # Format
 
 https://google.github.io/styleguide/jsguide.html
 
 # Test Coverage Report
 
----------------|---------|----------|---------|---------|-------------------
 File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ---------------|---------|----------|---------|---------|-------------------
 All files      |     100 |      100 |     100 |     100 |
