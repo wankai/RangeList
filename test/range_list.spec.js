@@ -59,6 +59,13 @@ describe("test remove(range)", ()=> {
     expect(range_list.toString()).toBe("[40, 60) [80, 90)");
   });
 
+  test('remove from empty', () => {
+    const range_list = new RangeList();
+    range_list.remove([20, 100]);
+    expect(range_list.toString()).toBe("");
+  });
+
+
   test('open end just equal to some close end', () => {
     const range_list = new RangeList();
     range_list.add([10, 15]);
